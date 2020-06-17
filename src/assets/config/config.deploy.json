@@ -1,0 +1,26 @@
+{
+    "env": {
+      "name": "Deploy"
+    },
+    "appInsights": {
+      "instrumentationKey": "Deploy Appinsightskey 1234"
+    },
+    "logging": {
+      "console": true,
+      "appInsights": false
+    },
+    "aad": {
+      "requireAuth": true,
+      "tenant": "<dev-guid-here>",
+      "clientId": "<dev-guid-here>"
+    },
+    "apiServer": {
+      "metadata": "https://metadata.demo.com/api/v1.0/",
+      "rules": "https://rules.demo.com/api/v1.0/",
+      "OcpApimSubscriptionKey": "0c3219cbf5474b538f1e37c44929f9b7",
+    
+      "baseUrl": "https://dev.medivetapi.co.uk/cpc/f1/"
+    }
+  }
+  
+  

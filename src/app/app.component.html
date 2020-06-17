@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-sm nav-bg-color navbar-dark">
+    <a class="navbar-brand" [routerLink]='["/"]'>
+        <img src="../assets/images/OurTeam/NTRARTSHeaderLogo.jpg" alt="Medivet" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]='["/"]'>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]='["/filmography"]'>Filmography</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]='["/socialconnect"]'>Social Connect</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]='["/aboutus"]'>AboutUs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]='["/contactus"]'>ContactUs</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+  <div>
+    <router-outlet>
+    </router-outlet>
+  </div>
+<div>
+    <app-footer></app-footer>
+</div>

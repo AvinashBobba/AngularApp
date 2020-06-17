@@ -1,0 +1,102 @@
+<style>
+  .select-editable { position:relative; background-color:white; border:solid grey 1px;  width:120px; height:18px; }
+  .select-editable select { position:absolute; top:0px; left:0px; font-size:14px; border:none; width:120px; margin:0; }
+  .select-editable input { position:absolute; top:0px; left:0px; width:100px; padding:1px; font-size:12px; border:none; }
+  .select-editable select:focus, .select-editable input:focus { outline:none; }
+</style>
+
+<section class="fullwidth py-5">
+  <div class="container">
+    <h1 class="color-brand pb-2">Contact Us</h1>
+    <p class="text-large">Please provide us with your details so that we can Contact you</p>
+  </div>
+</section>
+
+<section class="fullwidth pb-5 form-errors" *ngIf='errormessage'>
+  <div class="container">
+    <ul class="h5" >
+      <li [innerHTML]= 'errormessage'></li>
+    </ul>
+   
+  </div>
+</section>
+<section class="fullwidth pb-5">
+  <div class="container">
+    <form class="form-contact form-validate bv-form"  autocomplete="off"
+    (ngSubmit)="submit()">
+
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div class="form-group">
+          <label for="firstName">First Name <small class="required">*</small></label>
+          <a placement="right" ngbTooltip="We need your Surname"  class="form-tooltip"
+            ><i
+              class="fa fa-question-circle" aria-hidden="true"></i></a>
+          <input
+                 id="registerCustomerSurname"
+                 class="form-control input-lg"
+                 type="text"
+                 name="LastName"
+            formControlName="LastName"
+            class="form-control control-border text-transform" />
+        </div>
+      </div>
+      <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div class="form-group">
+          <label for="lastName">LastName Name <small class="required">*</small></label>
+          <a placement="right" ngbTooltip="We need your LastName"  class="form-tooltip"
+            ><i
+              class="fa fa-question-circle" aria-hidden="true"></i></a>
+          <input
+                 id="lastSurname"
+                 class="form-control input-lg"
+                 type="text"
+                 name="LastName"
+            formControlName="LastName"
+            class="form-control control-border text-transform" />
+        </div>
+      </div>
+      <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div class="form-group">
+          <label for="registerEmail">Email Address <small class="required">*</small></label>
+          <a placement="right" ngbTooltip="We need either your Email Address or your Phone Number to be able to contact you." class="form-tooltip"
+            ><i
+              class="fa fa-question-circle" aria-hidden="true"></i></a>
+          <input id="loginEmail" class="form-control input-lg" type="text" name="Email"
+            formControlName="Email"
+            class="form-control control-border text-transform" />
+        </div>
+      </div>
+      <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div class="form-group">
+          <label for="registerMobile">Mobile Number <small class="required">*</small></label>
+          <a placement="right" ngbTooltip=" We need either your Email Address or your Phone Number to be able to create an account for you." class="form-tooltip"
+            ><i
+              class="fa fa-question-circle" aria-hidden="true"></i></a>
+          <input id="loginMobile" class="form-control input-lg" formControlName="MobilePhone" type="text"
+             name="MobilePhone"
+            class="form-control control-border text-transform" />
+        </div>
+      </div>
+      <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div class="form-group">
+          <label for="message">Message<small class="required">*</small></label>
+          <a placement="right" ngbTooltip="Please do write the message  " class="form-tooltip"
+            ><i
+              class="fa fa-question-circle" aria-hidden="true"></i></a>
+          <textarea id="message" class="form-control input-lg" formControlName="Message" type="textarea"
+             name="Message"
+            class="form-control control-border text-transform" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="btn-container">
+          <button type="submit" class="btn btn-form">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+</section>
